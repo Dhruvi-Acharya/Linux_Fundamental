@@ -13,4 +13,4 @@ DAY=$(date -d "$D" '+%d') #current date
 MONTH=$(date -d "$D" '+%b') #current month
 final=$(($DAY-$days_before)) #last modified date = current date - days before last modification done
 
-find $HOME/$path -type f -name "[$letters]*" -ls |grep "$MONTH $final"
+find $HOME/$path -type f -name "[$letters]*" -ls |grep "$MONTH $final" # Find files recursively in a path directory whose name starts with letters and which were modified days_before
